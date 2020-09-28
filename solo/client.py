@@ -60,8 +60,8 @@ def find_all():
         for d in hid_devices
         if all(
             (
-                d.descriptor["vendor_id"] == 1155,
-                d.descriptor["product_id"] == 41674,
+                d.descriptor["vendor_id"] == 7504,
+                d.descriptor["product_id"] == 24828,
                 # "Solo" in d.descriptor["product_string"],
             )
         )
