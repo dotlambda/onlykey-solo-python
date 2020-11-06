@@ -442,7 +442,7 @@ def version(serial, udp):
         print(f"{major}.{minor}.{patch} {locked}")
 
     except solo.exceptions.NoSoloFoundError:
-        print("No Solo found.")
+        print("No security key found.")
         print("If you are on Linux, are your udev rules up to date?")
     except (solo.exceptions.NoSoloFoundError, ApduError):
         # Older
