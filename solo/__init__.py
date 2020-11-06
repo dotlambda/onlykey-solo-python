@@ -14,7 +14,7 @@ import pathlib
 
 from . import client, commands, dfu, helpers, operations
 
-__version__ = open(pathlib.Path(__file__).parent / "VERSION").read().strip()
+__version__ = 0
 
 
 del pathlib
