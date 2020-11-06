@@ -4,11 +4,10 @@ import platform
 
 LINUX_ROOT_WARNING = """THIS COMMAND SHOULD NOT BE RUN AS ROOT!
 
-Please install udev rules and run `solo` as regular user (without sudo).
-For more information, see: https://docs.solokeys.io/solo/udev"""
+Please install udev rules and run as regular user (without sudo).
+For more information, see: https://docs.crp.to/command-line.html"""
 
-WINDOWS_CTAP_WARNING = """Try running `solo` with administrator privileges!
-FIDO CTAP access is restricted on Windows 10 version 1903 and higher."""
+WINDOWS_CTAP_WARNING = """ """
 
 
 def windows_ctap_restriction():
