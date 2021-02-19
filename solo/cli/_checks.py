@@ -5,7 +5,7 @@ import platform
 LINUX_ROOT_WARNING = """THIS COMMAND SHOULD NOT BE RUN AS ROOT!
 
 Please install udev rules and run as regular user (without sudo).
-For more information, see: https://docs.crp.to/command-line.html"""
+For more information, see: https://docs.crp.to/command-line"""
 
 WINDOWS_CTAP_WARNING = """ """
 
