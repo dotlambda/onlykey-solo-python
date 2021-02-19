@@ -8,7 +8,7 @@
 # copied, modified, or distributed except according to those terms.
 #
 
-"""Python library for SoloKeys."""
+"""Python library for OnlyKey with Solo FIDO2"""
 
 import pathlib
 

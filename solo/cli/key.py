@@ -28,7 +28,7 @@ from solo.cli.update import update
 # https://pocoo-click.readthedocs.io/en/latest/commands/#nested-handling-and-contexts
 @click.group()
 def key():
-    """Interact with Solo keys, see subcommands."""
+    """Interact with keys, see subcommands."""
     pass
 
 
@@ -345,7 +345,7 @@ def set_pin(serial):
     "--udp", is_flag=True, default=False, help="Communicate over UDP with software key"
 )
 def verify(pin, serial, udp):
-    """Verify key is valid Solo Secure or Solo Hacker."""
+    """Verify key is valid"""
 
     # Any longer and this needs to go in a submodule
     print("Please press the button on your Solo key")

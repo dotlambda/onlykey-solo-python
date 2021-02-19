@@ -36,7 +36,7 @@ solo_cli.add_command(program)
 
 @click.command()
 def version():
-    """Version of python-solo library and tool."""
+    """Version of library and tool."""
     print(solo.__version__)
 
 
@@ -110,8 +110,7 @@ def mergehex(
     """Merges hex files, and patches in the attestation key.
 
     \b
-    If no attestation key is passed, uses default Solo Hacker one.
-    Note that later hex files replace data of earlier ones, if they overlap.
+    If no attestation key is passed, uses default.
     """
     solo.operations.mergehex(
         input_hex_files,
@@ -131,7 +130,7 @@ solo_cli.add_command(mergehex)
     "-a", "--all", is_flag=True, default=False, help="Show ST DFU devices too."
 )
 def ls(all):
-    """List Solos (in firmware or bootloader mode) and potential Solos in dfu mode."""
+    """List devices"""
 
     solos = solo.client.find_all()
     print(":: Solos")
