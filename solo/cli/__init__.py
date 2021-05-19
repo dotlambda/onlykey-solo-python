@@ -18,7 +18,6 @@ from solo.cli.key import key
 from solo.cli.monitor import monitor
 from solo.cli.program import program
 
-from . import _patches  # noqa  (since otherwise "unused")
 from ._checks import init_checks
 
 init_checks()
@@ -136,10 +135,20 @@ def ls(all):
     print(":: Solos")
     for c in solos:
         descriptor = c.dev.descriptor
-        if "serial_number" in descriptor:
-            print(f"{descriptor['serial_number']}: {descriptor['product_string']}")
+
+        if hasattr(descriptor, "product_name"):
+            product_name = descriptor.product_name
+        elif c.is_solo_bootloader():
+            product_name = "Solo Bootloader device"
         else:
-            print(f"{descriptor['path']}: {descriptor['product_string']}")
+            product_name = "FIDO2 device"
+
+        if hasattr(descriptor, "serial_number"):
+            serial_or_path = descriptor.serial_number
+        else:
+            serial_or_path = descriptor.path
+
+        print(f"{serial_or_path}: {product_name}")
 
     if all:
         print(":: Potential Solos in DFU mode")
